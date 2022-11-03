@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+#container {
+  min-height: 100vh;
+}
+.topbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+.topbar::before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(48, 44, 121, 1) 11%,
+    rgba(12, 75, 88, 1) 100%
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.topbar img {
+  filter: contrast(0) brightness(2);
+  width: 8%;
+  height: auto;
+}
+#logo {
+  cursor: pointer;
+}
+#menu {
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: auto;
+  padding: 25px;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  color: white;
+  padding: 30px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: rgba(16, 16, 43, 0.423);
+  transition: 0.5s;
+}
+
+#row {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(6, 0, 22);
+  box-shadow: 10px 10px 10px rgb(116, 115, 115);
+}
+.col-1 {
+  display: flex;
+  flex-basis: 60%;
+  flex-direction: column;
+  margin: 50px;
+}
+#google-btn {
+  border: 1px solid rgb(255, 252, 252);
+  width: 50%;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+#google-btn:hover {
+  background-color: white;
+  color: black;
+}
+#google-btn img {
+  width: 5%;
+  height: auto;
+}
+#google-logo {
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* utility classes*/
+.primary-h1 {
+  font-size: 50px;
+  color: white;
+}
+.secondary-p2 {
+  padding: 6px;
+  color: white;
+}
+.primary-p {
+  color: white;
+  padding-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.form-group input {
+  height: 25px;
+  text-align: center;
+  border-radius: 20px;
+  width: 50%;
+}
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.col-2 {
+  display: flex;
+  flex-basis: 40%;
+  align-items: center;
+}
+.col-2 img {
+  width: 100%;
+  height: auto;
+}
+
+/*gallery*/
+#Marketplace {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.marketplace-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  text-align: center;
+  margin: 15px;
+}
+.price {
+  color: grey;
+  padding: 10px;
+  font-size: 18px;
+}
+.card button {
+  outline: 0;
+  border: none;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  opacity: 0.7;
+}
+#contactus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 0 7%;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 44, 121, 1) 11%,
+    rgba(12, 75, 88, 1) 100%
+  );
+  color: white;
+}
+#community-top {
+  display: flex;
+  flex-basis: 50%;
+  margin: 25px;
+  box-sizing: border-box;
+}
+
+.fa-brands {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(19, 92, 106, 0.336);
+  padding: 9px;
+  border: 0px solid;
+  border-radius: 8px;
+}
+.fa-solid {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(19, 92, 106, 0.336);
+  padding: 9px;
+  border: 0px solid;
+  border-radius: 8px;
+}
+footer {
+  background-color: rgb(6, 0, 22);
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 890px) {
+  .topbar img {
+    width: 28%;
+  }
+  #menu {
+    display: block;
+    width: 30px;
+  }
+  #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  nav ul {
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(48, 44, 121, 1) 11%,
+      rgba(12, 75, 88, 1) 100%
+    );
+    z-index: 1;
+  }
+  nav ul li {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .primary-h1 {
+    font-size: 40px;
+    color: white;
+  }
+  .col-1 {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    margin: 50px;
+  }
+  .google-btn2 {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+
+  #google-btn img {
+    width: 7%;
+    text-align: center;
+    height: auto;
+  }
+  .primary-p {
+    font-size: 0.7rem;
+  }
+  #google-btn {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .secondary-p2 {
+    font-size: 0.7em;
+  }
+  .form-group input {
+    height: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  ::placeholder {
+    font-size: 0.65rem;
+  }
+  .col-1 {
+    flex-basis: 50%;
+    margin-left: 10px;
+  }
+  .col-2 {
+    margin-right: 5px;
+    flex-basis: 50%;
+  }
+  #Marketplace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .community-style {
+    font-size: 2.5rem;
+  }
+  #community-top {
+    display: block;
+    text-align: center;
+  }
+  #community-top p {
+    font-size: 1.2rem;
+  }
+  #contactus {
+    display: block;
+  }
+  .community-right {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .fa-solid {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px 0;
+  }
+  footer {
+    text-align: center;
+  }
+}
